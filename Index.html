@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVTOBAZA.PRO</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AVTOBAZA.PRO</h1>
+    <p>Автомобили под заказ из Южной Кореи</p>
+    <button class="btn" onclick="showCatalog()">Посмотреть каталог</button>
+    <button class="btn" onclick="openContact()">Связаться с менеджером</button>
+  </div>
+
+  <script>
+    const { WebApp } = window.Telegram;
+
+    function showCatalog() {
+      WebApp.showAlert('Каталог пока в разработке!');
+    }
+
+    function openContact() {
+      WebApp.openLink('https://t.me/your_manager_username');
+    }
+  </script>
+</body>
+</html>
